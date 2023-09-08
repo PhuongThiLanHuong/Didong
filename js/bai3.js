@@ -4,15 +4,16 @@ function calculateScore(s1, s2, s3) {
     console.log('The average score is' + avarageScore)
 }
 calculateScore(96, 108, 89)
-let dolphinAverage = Math.round(calculateScore(96, 108, 89))
-let koalasAverage = Math.round(calculateScore(88, 91, 110))
+let dolphinAverage = Math.round(calculateScore(97, 112, 101))
+let koalasAverage = Math.round(calculateScore(109, 95, 106))
 console.log(dolphinAverage)
 console.log(koalasAverage)
+const minScore = 100;
 
 function checkWinner(dolphinAverage, koalasAverage) {
-    if (dolphinAverage > koalasAverage)
+    if (dolphinAverage > koalasAverage && minScore)
         console.log('Dolphin won!')
-    else if (koalasAverage > dolphinAverage)
+    else if (koalasAverage > dolphinAverage && minScore)
         console.log('Koalas won!')
     else console.log('They tie')
 }
